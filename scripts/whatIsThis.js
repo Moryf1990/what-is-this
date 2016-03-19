@@ -91,7 +91,7 @@ var confusing = {
 
 
 // * Problem 5
-inAnObject.anotherObject.test2('twitter', 'book');
+// inAnObject.anotherObject.test2('twitter', 'book');
 // * "this" is ... redefining the test2 to say twitter and book
 // * because ... there is a value inside the inAnObject called anotherObject (which is also an object) and it has a value called test2 and it is set to equal the whatIsThis 
 //function and threfore it redefines 'a' and 'b' from that function to equal 'twitter' and 'book'
@@ -101,72 +101,72 @@ inAnObject.anotherObject.test2('twitter', 'book');
 
 // * Problem 6
 // whatIsThis.call();
-// * "this" is ...
-// * because ...
+// * "this" is ... undefined
+// * because ... nothing is being returned
 
 
 
 
 // * Problem 7
 // whatIsThis.call(trickyTricky);
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the function trickyTricky
+// * because ... trickyTricky has values stored directly inside of it
 
 
 
 
 // * Problem 8
 // whatIsThis.call(trickyTricky, 'nice', 'job');
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the function trickyTricky and giving nice and job the values of a and b
+// * because ... trickyTricky has values stored directly inside of it
 
 
 
 
 // * Problem 9
 // whatIsThis.call(confusing);
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the function whatisThis and passing through the confusing object
+// * because ... what is this is a function and confusing is the object getting passed through
 
 
 
 
 // * Problem 10
 // whatIsThis.call(confusing, 'hello');
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the whatIsThis function, passing in confusing and setting the value of a to hello
+// * because ... what is this is a function and the first thing passed through is the confusing object and the second thing passed through is the string hello 
 
 
 
 
 // * Problem 11
 // whatIsThis.apply(trickyTricky);
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the whatIsThis function and applying the arguments of the trickyTricky object
+// * because ... apply is calling the function and appying the arguments of the trickyTricky object
 
 
 
 
 // * Problem 12
 // whatIsThis.apply(confusing, ['nice', 'job']);
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the whatIsThis function and applying the arguments of the trickyTricky object and setting the parameters of whatIsThis to nice and job
+// * because ... apply is calling the function and appying the arguments of the trickyTricky object
 
 
 
 
 // * Problem 13
 // whatIsThis.apply(confusing, 'nice', 'job');
-// * "this" is ...
-// * because ...
+// * "this" is ... giving an error that the arguments list has wrong type 
+// * because ... the apply method has to have the parameters of a and b in an array to work
 
 
 
 
 // * Problem 14
 // inAFunction('what will', 'happen?');
-// * "this" is ...
-// * because ...
+// * "this" is ... referening the whatIsThis function and passing what will and happen as the parameters for a and b 
+// * because ... whatIsThis is being referenced in the inAFunction function
 
 
 
@@ -217,11 +217,10 @@ inAnObject.anotherObject.test2('twitter', 'book');
 
 
 
+// var propToShow = prompt('Which property would you like to see?');
 
 
-
-
-
+// console.log(person1.propToShow)
 
 
 
