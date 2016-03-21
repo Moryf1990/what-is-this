@@ -56,7 +56,7 @@ var confusing = {
 
 // * Problem 1
 // whatIsThis('hello', 'world');
-// * "this" is ... this is the function whatIsThis being called and it's parameters are 'hello' and 'world'
+// * "this" is ... this is the function whatIsThis being called and it's parameters are 'hello' and 'world' and it is a window object which means it is available on an open window
 // * because ...  the whatIsThis function is being declared above and it is being called with these new arguments
 
 
@@ -109,7 +109,7 @@ var confusing = {
 
 // * Problem 7
 // whatIsThis.call(trickyTricky);
-// * "this" is ... calling the function trickyTricky
+// * "this" is ... calling the object trickyTricky
 // * because ... trickyTricky has values stored directly inside of it
 
 
@@ -117,7 +117,7 @@ var confusing = {
 
 // * Problem 8
 // whatIsThis.call(trickyTricky, 'nice', 'job');
-// * "this" is ... calling the function trickyTricky and giving nice and job the values of a and b
+// * "this" is ... calling the object trickyTricky and giving nice and job the values of a and b
 // * because ... trickyTricky has values stored directly inside of it
 
 
@@ -173,16 +173,16 @@ var confusing = {
 
 // * Problem 15
 // inAFunction.test3('A', 'B');
-// * "this" is ...
-// * because ...
+// * "this" is ... returning and error saying that inAFunction.test3 is not a function
+// * because ... test3 has not been declared as anything
 
 
 
 
 // * Problem 16
 // var newObject = new inAFunction('what will', 'happen?');
-// * "this" is ...
-// * because ...
+// * "this" is ... declaring a variable and setting it equal to a new instance of the inAFunction function
+// * because ... we have declared a variable and set it equal to a new instance of the inAFunction function 
 
 
 
@@ -190,37 +190,30 @@ var confusing = {
 // * Problem 17
 // var newObject = new inAFunction('what will', 'happen?');
 // newObject.test3('C', 'D');
-// * "this" is ...
-// * because ...
+// * "this" is ... setting a new instance of the inAFunction function and passing in what will as the value of A and happen as the value of B and below we are giving the newObject variable C as the value of a and D as the value of b
+// * because ... a variable as being declared and set equal to a new instance of the inAFunction function and at first what will is being passed in as the value of a and happen is 
+// being passed in as the value of b and below the variable is being redefined with C as the value of a and D as the value of b
 
 
 
 
 // * Problem 18
 // inAnObject.test1.call(trickyTricky, 'face', 'book');
-// * "this" is ...
-// * because ...
+// * "this" is ... calling the trickyTricky variable inside of the inAnObject object and setting a equal to face and b equal to book
+// * because ... trickyTricky is being called inside of inAnObject
 
 
 
 
 // * Problem 19
 // inAnObject.anotherObject.test2.apply(confusing, ['foo', 'bar']);
-// * "this" is ...
-// * because ...
+// * "this" is ... starting off inside the inAnObject object and going to the anotherObject object inside there and 
+// going to the test2 key (which is the whatIsThis function) and applyig foo as a and bar as b in whatIsThis
+// * because ... it goes from inAnObject to anotherObject to test2(which has a the value of the whatIsThis function)
 
 
 
 
-
-
-
-
-
-// var propToShow = prompt('Which property would you like to see?');
-
-
-// console.log(person1.propToShow)
 
 
 
